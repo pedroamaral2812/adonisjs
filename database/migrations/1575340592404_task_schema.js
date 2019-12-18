@@ -12,7 +12,7 @@ class TaskSchema extends Schema {
       .integer('project_id')
       .unsigned()
       .references('id')
-      .inTable('users')
+      .inTable('projects')
       .onUpdate('CASCADE')
       .onDelete('CASCADE')
       .notNullable()
