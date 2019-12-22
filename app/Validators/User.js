@@ -1,5 +1,7 @@
 'use strict'
 
+const Antl = use('Antl')
+
 class User{
   //Faz com valide todos os campos
   get validateAll () {
@@ -13,6 +15,10 @@ class User{
       email: 'required|email|unique:users',
       password: 'required|confirmed'
     }
+  }
+
+  get messages () {
+      return Antl.list('validation')
   }
 }
 

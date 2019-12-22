@@ -1,5 +1,7 @@
 'use strict'
 
+const Antl = use('Antl')
+
 class ForgotPassword {
 
   //Faz com valide todos os campos
@@ -12,6 +14,10 @@ class ForgotPassword {
       email: 'required|email',
       redirect_url: 'required|url'
     }
+  }
+
+  get messages () {
+    return Antl.list('validation')
   }
 }
 
